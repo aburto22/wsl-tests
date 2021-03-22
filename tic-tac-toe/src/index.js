@@ -22,22 +22,18 @@ class Board extends React.Component {
     );
   }
 
-  createRow(pos) {
-    let rowSquare = [];
-    for (let i = 0; i < 3; i++) {
-      rowSquare[i] = this.renderSquare(3 * pos + i);
-    }
-    return (
-      <div className="board-row" key={"row-" + pos}>
-        {rowSquare}
-      </div>
-    );
-  }
-
   createBoard() {
     let board = [];
     for (let i = 0; i < 3; i++) {
-      board[i] = this.createRow(i);
+      let row = [];
+      for (let j = 0; j < 3; j++) {
+        row[j] = this.renderSquare(3 * i + j);
+      }
+      board[i] = (
+        <div className="board-row" key={"row-" + i}>
+          {row}
+        </div>
+      );
     }
     return board;
   }
