@@ -1,22 +1,24 @@
 {
-  "name": "remenber-to-do",
-  "version": "0.0.1",
-  "private": true,
+  "name": "mocha-test",
+  "version": "1.0.0",
+  "description": "a test project to try mocha and chai",
+  "main": "server.js",
   "scripts": {
-    "start": "node ./bin/www"
+    "test": "mocha",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
+  "author": "Alejandro",
+  "license": "MIT",
   "dependencies": {
-    "cookie-parser": "~1.4.4",
+    "chai": "^4.3.4",
+    "chai-http": "^4.3.0",
     "cors": "^2.8.5",
-    "debug": "~2.6.9",
     "dotenv": "^8.2.0",
-    "express": "~4.16.1",
-    "http-errors": "~1.6.3",
-    "jade": "~1.11.0",
+    "express": "^4.17.1",
+    "mocha": "^8.3.2",
     "mongoose": "^5.12.4",
-    "morgan": "~1.9.1",
+    "nodemon": "^2.0.7",
     "path": "^0.12.7"
-  },
-  "author": "Alejandro Aburto",
-  "engine": {}
+  }
 }
